@@ -4,6 +4,9 @@ import os
 import json
 import hashlib
 import datasets
+from uncertainty.utils import utils
+
+args = utils.get_parser().parse_args()
 from datasets import load_from_disk, Dataset, DatasetDict, concatenate_datasets
 
 
@@ -104,9 +107,9 @@ def load_ds(dataset_name, seed, add_options=None):
         train_dataset = dataset["train"]
         validation_dataset = dataset["test"]
 
-    elif dataset_name == "mushroom-de":
+    elif "mushroom" in dataset_name:
         # Load the custom dataset we created, treating all data as validation
-        custom_dataset_path = f"/home/ubuntu/semantic_uncertainty/semantic_uncertainty/data/combined_dataset/mushroom-de"
+        custom_dataset_path = f"/home/ubuntu/semantic_uncertainty/semantic_uncertainty/data/combined_dataset/{args.dataset}"
 
         try:
             # Load the dataset
