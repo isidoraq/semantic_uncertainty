@@ -11,6 +11,7 @@ __pycache__/
 .Python
 build/
 develop-eggs/
+semantic_uncertainty/data
 dist/
 downloads/
 eggs/
@@ -19,7 +20,9 @@ lib/
 lib64/
 parts/
 sdist/
+logs/
 var/
+wandb/
 wheels/
 pip-wheel-metadata/
 share/python-wheels/
