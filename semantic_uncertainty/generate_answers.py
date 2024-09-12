@@ -298,7 +298,7 @@ def main(args):
             ):
                 num_generations = 1
             else:
-                #num_generations = args.num_generations + 1
+                # num_generations = args.num_generations + 1
                 num_generations = 1
 
             for i in range(num_generations):
@@ -482,11 +482,11 @@ if __name__ == "__main__":
             torch.cuda.empty_cache()
             logging.info(50 * "#X")
             print(50 * "#X")
-            #logging.info("STARTING `compute_uncertainty_measures`!")
-            #print("STARTING `compute_uncertainty_measures`!")
-            #main_compute(args)
-            #logging.info("FINISHED `compute_uncertainty_measures`!")
-            #print("FINISHED `compute_uncertainty_measures`!")
+            # logging.info("STARTING `compute_uncertainty_measures`!")
+            # print("STARTING `compute_uncertainty_measures`!")
+            # main_compute(args)
+            # logging.info("FINISHED `compute_uncertainty_measures`!")
+            # print("FINISHED `compute_uncertainty_measures`!")
 
     except Exception as e:
         logger.exception("An error occurred during script execution:")

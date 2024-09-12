@@ -331,7 +331,7 @@ def model_based_metric_iou_corr(predicted_answer, example):
 
     # Calculate metrics for each correct answer and take the best score
     iou_scores = [calculate_iou(predicted_answer, answer) for answer in correct_answers]
-    
+
     corr_scores = [
         calculate_probability_correlation(predicted_answer, answer)
         for answer in correct_answers
@@ -344,10 +344,10 @@ def model_based_metric_iou_corr(predicted_answer, example):
 
 
 def model_based_metric_add(predicted_answer, example, model):
-    if 'answers' in example:
-        correct_answers = example['answers']['text']
-    elif 'reference' in example:
-        correct_answers = example['reference']['answers']['text']
+    if "answers" in example:
+        correct_answers = example["answers"]["text"]
+    elif "reference" in example:
+        correct_answers = example["reference"]["answers"]["text"]
     else:
         raise ValueError
 
