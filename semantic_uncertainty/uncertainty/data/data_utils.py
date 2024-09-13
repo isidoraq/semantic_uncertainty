@@ -109,7 +109,7 @@ def load_ds(dataset_name, seed, add_options=None):
 
     elif "mushroom" in dataset_name:
         # Load the custom dataset we created, treating all data as validation
-        custom_dataset_path = f"/home/ubuntu/semantic_uncertainty/semantic_uncertainty/data/combined_dataset/{args.dataset}"
+        custom_dataset_path = f"{args.dataset_folder}{args.dataset}"
 
         try:
             # Load the dataset

@@ -79,6 +79,13 @@ def get_parser(stages=["generate", "compute"]):
             help="Dataset to use to assemble few-shot prompt, p_true prompt, and train p_ik.",
         )
         parser.add_argument(
+            "--dataset_folder",
+            type=str,
+            default="/home/ubuntu/semantic_uncertainty/semantic_uncertainty/data/combined_dataset",
+            help="Dataset folder",
+        )
+
+        parser.add_argument(
             "--num_samples", type=int, default=400, help="Number of samples to use"
         )
         parser.add_argument(
